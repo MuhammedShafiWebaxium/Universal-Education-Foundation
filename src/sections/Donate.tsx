@@ -1,5 +1,4 @@
-import { Copy, Check, HandHeart, Landmark } from 'lucide-react'
-import { useState } from 'react'
+import { HandHeart } from 'lucide-react'
 import { Reveal, SectionHeading } from './Reveal'
 
 const bankDetails = [
@@ -12,31 +11,10 @@ const bankDetails = [
 ]
 
 function DetailRow({ label, value }: { label: string; value: string }) {
-  const [copied, setCopied] = useState(false)
-
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(value)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 1600)
-    } catch {
-      /* clipboard unavailable */
-    }
-  }
-
   return (
-    <div className="flex items-center justify-between gap-3 border-b border-white/10 py-2.5 last:border-0">
-      <div>
-        <div className="text-[0.65rem] font-semibold uppercase tracking-[0.13em] text-navy-200">{label}</div>
-        <div className="mt-0.5 font-mono text-sm font-semibold text-white sm:text-base">{value}</div>
-      </div>
-      <button
-        onClick={copy}
-        aria-label={`Copy ${label}`}
-        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/20 text-navy-200 transition-colors hover:border-gold-400 hover:text-gold-400"
-      >
-        {copied ? <Check className="h-4 w-4 text-gold-400" /> : <Copy className="h-4 w-4" />}
-      </button>
+    <div className="py-3">
+      <div className="text-xs font-medium text-slate-500">{label}</div>
+      <div className="mt-0.5 text-sm font-semibold text-navy-900 sm:text-base">{value}</div>
     </div>
   )
 }
@@ -83,16 +61,9 @@ export function Donate() {
           </Reveal>
 
           <Reveal delay={0.15} className="lg:col-span-3">
-            <div className="rounded-2xl bg-navy-900 p-5 shadow-xl shadow-navy-900/20 sm:p-6">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gold-500/15 text-gold-400">
-                  <Landmark className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="font-display text-xl font-bold text-white">Bank Account Details</h3>
-                  <p className="text-xs text-navy-200 sm:text-sm">Direct transfer / NEFT / RTGS / IMPS / SWIFT</p>
-                </div>
-              </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
+              <h3 className="font-display text-xl font-bold text-navy-900">Bank Account Details</h3>
+              <p className="mt-1 text-sm text-slate-500">Direct transfer / NEFT / RTGS / IMPS / SWIFT</p>
               <div className="mt-3">
                 {bankDetails.map((d) => (
                   <DetailRow key={d.label} label={d.label} value={d.value} />

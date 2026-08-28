@@ -22,13 +22,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="mx-auto max-w-[31rem] rounded-2xl border border-white/60 bg-white/90 p-5 text-center shadow-xl shadow-navy-950/15 backdrop-blur-md sm:p-7 lg:mx-0 lg:max-w-[35rem] lg:p-8 lg:text-left"
+          className="mx-auto max-w-[40rem] rounded-2xl border border-white/50 bg-white/50 p-5 text-center shadow-xl shadow-navy-950/15 backdrop-blur-md sm:p-7 lg:mx-0 lg:p-8 lg:text-left"
         >
-          <p className="mb-3 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
-            Universal Education Foundation
-          </p>
-
-          <h1 className="text-balance font-display text-[clamp(2.25rem,10vw,3.25rem)] font-bold leading-none tracking-[-0.035em] text-navy-900 lg:text-[clamp(3.25rem,4.25vw,4rem)]">
+          <h1 className="whitespace-nowrap font-display text-[clamp(1.65rem,8vw,3.25rem)] font-bold leading-none tracking-[-0.035em] text-navy-900 lg:text-[3.5rem]">
             One with <span className="relative inline-block italic">
               <span className="relative z-10">humanity</span>
               <span
@@ -37,10 +33,6 @@ export function Hero() {
               />
             </span>
           </h1>
-
-          <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-navy-800/80 sm:text-base lg:mx-0">
-            Creating access to education, opportunity, and a brighter future for every community.
-          </p>
 
           <div className="mt-5 flex justify-center sm:mt-6 lg:justify-start">
             <a
