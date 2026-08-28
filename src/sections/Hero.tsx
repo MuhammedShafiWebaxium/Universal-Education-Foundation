@@ -3,34 +3,49 @@ import hero from '@/assets/hero-school.jpg'
 
 export function Hero() {
   return (
-    <section id="top" className="relative flex min-h-[92vh] items-center overflow-hidden">
+    <section
+      id="top"
+      className="relative isolate flex min-h-[100svh] items-end overflow-hidden lg:items-center"
+    >
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 -z-20 bg-cover bg-[center_32%] sm:bg-center lg:bg-[center_42%] xl:bg-[center_45%]"
         style={{ backgroundImage: `url(${hero})` }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-44 lg:px-8">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-900/70 via-navy-900/10 to-white/10 lg:bg-gradient-to-r lg:from-navy-900/40 lg:via-transparent lg:to-transparent"
+      />
+
+      <div className="mx-auto w-full max-w-7xl px-4 pb-6 pt-24 sm:px-6 sm:pb-8 lg:px-8 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="max-w-2xl rounded-3xl border border-white/70 bg-white/80 p-8 text-center shadow-2xl shadow-navy-900/15 backdrop-blur-md sm:p-12 sm:text-left"
+          className="mx-auto max-w-[31rem] rounded-2xl border border-white/60 bg-white/90 p-5 text-center shadow-xl shadow-navy-950/15 backdrop-blur-md sm:p-7 lg:mx-0 lg:max-w-[35rem] lg:p-8 lg:text-left"
         >
-          <h1 className="font-display text-5xl font-bold leading-[1.08] text-navy-900 sm:text-6xl lg:text-7xl">
-            One with{' '}
-            <span className="relative inline-block italic">
+          <p className="mb-3 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
+            Universal Education Foundation
+          </p>
+
+          <h1 className="text-balance font-display text-[clamp(2.25rem,10vw,3.25rem)] font-bold leading-none tracking-[-0.035em] text-navy-900 lg:text-[clamp(3.25rem,4.25vw,4rem)]">
+            One with <span className="relative inline-block italic">
               <span className="relative z-10">humanity</span>
               <span
                 aria-hidden="true"
-                className="absolute inset-x-0 bottom-1 z-0 h-[0.34em] -rotate-1 rounded-sm bg-gold-500/70"
+                className="absolute inset-x-0 bottom-[0.06em] z-0 h-[0.3em] -rotate-1 rounded-sm bg-gold-500/70"
               />
             </span>
           </h1>
 
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+          <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-navy-800/80 sm:text-base lg:mx-0">
+            Creating access to education, opportunity, and a brighter future for every community.
+          </p>
+
+          <div className="mt-5 flex justify-center sm:mt-6 lg:justify-start">
             <a
               href="#about"
-              className="inline-flex items-center gap-2 rounded-full bg-navy-900 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-navy-900/20 transition-all hover:scale-105 hover:bg-navy-800"
+              className="inline-flex min-h-10 items-center justify-center rounded-full bg-navy-900 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-navy-900/20 transition-all hover:-translate-y-0.5 hover:bg-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-900"
             >
               About the Foundation
             </a>
