@@ -7,7 +7,6 @@ const items = [
     title: "Registered Office",
     lines: [
       "Universal Education Foundation",
-      "A Public Charitable Trust",
       "3rd Floor, Room No. 67/1057-A,",
       "Paramara Road, North Square Building,",
       "Ernakulam, Kerala – 682018",
