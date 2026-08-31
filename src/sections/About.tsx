@@ -41,7 +41,7 @@ export function About() {
         <SectionHeading
           eyebrow="About the Foundation"
           title="A Trust Built on the Promise of Education"
-          description="The Universal Education Foundation is a Public Charitable Trust based in Ernakulam, Kerala, charged with a single, enduring mission: to make quality education accessible to all — through scholarships, continuing education programs and community welfare initiatives."
+          description="The Universal Education Foundation is based in Ernakulam, Kerala, and has a single, enduring mission: to make quality education accessible to all — through scholarships, continuing education programs and community welfare initiatives."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

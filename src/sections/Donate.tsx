@@ -53,7 +53,7 @@ export function Donate() {
                 </ul>
               </div>
               <p className="mt-8 rounded-xl bg-white p-4 text-sm leading-relaxed text-slate-600 ring-1 ring-navy-100">
-                The Universal Education Foundation is a registered Public Charitable Trust. For
+                The Universal Education Foundation supports education and community welfare. For
                 donation receipts and acknowledgements, please share your transaction details at{' '}
                 <span className="font-semibold text-navy-900">info@universaledufoundation.org</span>.
               </p>

@@ -49,7 +49,7 @@ export function Footer() {
               className="h-11 w-auto"
             />
             <p className="mt-6 max-w-sm leading-relaxed text-navy-200">
-              A Public Charitable Trust dedicated to advancing education,
+              Dedicated to advancing education,
               scholarships and community welfare — serving learners and families
               from Ernakulam, Kerala.
             </p>
