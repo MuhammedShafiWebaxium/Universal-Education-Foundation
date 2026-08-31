@@ -1,32 +1,25 @@
-import { CalendarDays } from 'lucide-react'
-import { Reveal, SectionHeading } from './Reveal'
-import scholarship from '@/assets/scholarship.jpg'
-import healthCamp from '@/assets/charity-health.jpg'
-import learners from '@/assets/indian-learners.jpg'
+import { CalendarDays } from "lucide-react";
+import { Reveal, SectionHeading } from "./Reveal";
+import scholarship from "@/assets/scholarship.jpg";
+import healthCamp from "@/assets/charity-health.jpg";
+import learners from "@/assets/indian-learners.jpg";
 
 const news = [
   {
     image: scholarship,
-    date: 'June 14, 2026',
-    category: 'Scholarships',
-    title: 'Annual Scholarship Distribution Ceremony Held in Ernakulam',
-    text: 'The Foundation awarded scholarships to hundreds of deserving students from economically weaker families at its annual ceremony.',
+    date: "June 14, 2026",
+    category: "Scholarships",
+    title: "Annual Scholarship Distribution Ceremony Held in Ernakulam",
+    text: "The Foundation awarded scholarships to hundreds of deserving students from economically weaker families at its annual ceremony.",
   },
   {
     image: healthCamp,
-    date: 'May 28, 2026',
-    category: 'Community',
-    title: 'Free Health Camp Serves Over 500 Residents',
-    text: 'Volunteer doctors and nurses provided free check-ups, medicines and health guidance at the Foundation\u2019s latest community medical camp.',
+    date: "May 28, 2026",
+    category: "Community",
+    title: "Free Health Camp Serves Over 500 Residents",
+    text: "Volunteer doctors and nurses provided free check-ups, medicines and health guidance at the Foundation\u2019s latest community medical camp.",
   },
-  {
-    image: learners,
-    date: 'May 02, 2026',
-    category: 'Continuing Education',
-    title: 'Enrolment Opens for the Continuing Education Program',
-    text: 'Discontinued learners and working professionals can now apply for RPL, CRP, ACS, RPS and equivalency pathways.',
-  },
-]
+];
 
 export function News() {
   return (
@@ -38,7 +31,7 @@ export function News() {
           description="Milestones, programs and stories from across the Universal Education Foundation's educational and charitable work."
         />
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-4xl gap-8 md:grid-cols-2">
           {news.map((n, i) => (
             <Reveal key={n.title} delay={i * 0.12}>
               <article className="group h-full overflow-hidden rounded-2xl bg-white ring-1 ring-navy-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-navy-900/15">
@@ -60,7 +53,9 @@ export function News() {
                   <h3 className="mt-3 font-display text-xl font-bold leading-snug text-navy-900 transition-colors group-hover:text-primary">
                     {n.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{n.text}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    {n.text}
+                  </p>
                 </div>
               </article>
             </Reveal>
@@ -68,5 +63,5 @@ export function News() {
         </div>
       </div>
     </section>
-  )
+  );
 }
