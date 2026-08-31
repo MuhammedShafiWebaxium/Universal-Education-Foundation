@@ -121,7 +121,7 @@ export function Charity() {
             </div>
             <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
               <a
-                href="#donate"
+                href="#bank-account-details"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-bold text-navy-900 transition-all hover:scale-105 hover:bg-gold-400"
               >
                 <HandHeart className="h-5 w-5" />

@@ -23,7 +23,7 @@ export function CTA() {
         <Reveal delay={0.3}>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#donate"
+              href="#bank-account-details"
               className="group inline-flex items-center gap-2 rounded-full bg-gold-500 px-8 py-4 text-base font-bold text-navy-900 shadow-xl shadow-gold-500/25 transition-all hover:scale-105 hover:bg-gold-400"
             >
               <HandHeart className="h-5 w-5" />

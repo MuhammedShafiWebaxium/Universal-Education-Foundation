@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays } from 'lucide-react'
+import { CalendarDays } from 'lucide-react'
 import { Reveal, SectionHeading } from './Reveal'
 import scholarship from '@/assets/scholarship.jpg'
 import healthCamp from '@/assets/charity-health.jpg'
@@ -61,10 +61,6 @@ export function News() {
                     {n.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">{n.text}</p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-primary">
-                    Read more
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
                 </div>
               </article>
             </Reveal>

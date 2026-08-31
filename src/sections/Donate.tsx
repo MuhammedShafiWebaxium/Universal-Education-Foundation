@@ -61,7 +61,10 @@ export function Donate() {
           </Reveal>
 
           <Reveal delay={0.15} className="lg:col-span-3">
-            <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
+            <div
+              id="bank-account-details"
+              className="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6"
+            >
               <h3 className="font-display text-xl font-bold text-navy-900">Bank Account Details</h3>
               <p className="mt-1 text-sm text-slate-500">Direct transfer / NEFT / RTGS / IMPS / SWIFT</p>
               <div className="mt-3">

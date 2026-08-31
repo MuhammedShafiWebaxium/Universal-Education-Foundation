@@ -5,19 +5,28 @@ const columns = [
   {
     title: "The Foundation",
     links: [
-      "About the Trust",
-      "Board of Trustees",
-      "Governance & Reports",
-      "News & Events",
+      { label: "About the Trust", href: "#about" },
+      { label: "Board of Trustees", href: "#about" },
+      { label: "Governance & Reports", href: "#about" },
+      { label: "News & Events", href: "#news" },
     ],
   },
   {
     title: "Our Work",
-    links: ["Educational Initiatives", "Charitable Programs", "Scholarships"],
+    links: [
+      { label: "Educational Initiatives", href: "#initiatives" },
+      { label: "Charitable Programs", href: "#charity" },
+      { label: "Scholarships", href: "#initiatives" },
+    ],
   },
   {
     title: "Get Involved",
-    links: ["Donate", "Volunteer", "Partner with Us", "Contact"],
+    links: [
+      { label: "Donate", href: "#bank-account-details" },
+      { label: "Volunteer", href: "#contact" },
+      { label: "Partner with Us", href: "#contact" },
+      { label: "Contact", href: "#contact" },
+    ],
   },
 ];
 
@@ -49,7 +58,7 @@ export function Footer() {
               {socials.map((s) => (
                 <a
                   key={s.label}
-                  href="#top"
+                  href="#contact"
                   aria-label={s.label}
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-navy-200 transition-colors hover:border-gold-500 hover:bg-gold-500 hover:text-navy-900"
                 >
@@ -66,12 +75,12 @@ export function Footer() {
               </h4>
               <ul className="mt-5 space-y-3">
                 {col.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#top"
+                      href={link.href}
                       className="text-sm text-navy-200 transition-colors hover:text-white"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -80,19 +89,11 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-14 border-t border-white/10 pt-8">
           <p className="text-sm text-navy-200">
             © {new Date().getFullYear()} Universal Education Foundation. All
             rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-navy-200">
-            <a href="#top" className="transition-colors hover:text-white">
-              Privacy Policy
-            </a>
-            <a href="#top" className="transition-colors hover:text-white">
-              Terms of Use
-            </a>
-          </div>
         </div>
       </div>
     </footer>

@@ -27,7 +27,7 @@ const items = [
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-navy-50 py-24 lg:py-32">
+    <section id="contact" className="scroll-mt-20 bg-navy-50 py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Get in Touch"

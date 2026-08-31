@@ -37,7 +37,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#donate"
+            href="#bank-account-details"
             className="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-bold text-navy-900 transition-transform hover:scale-105 hover:bg-gold-400"
           >
             Donate Now
@@ -66,7 +66,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#donate"
+            href="#bank-account-details"
             onClick={() => setOpen(false)}
             className="mt-3 inline-block rounded-full bg-gold-500 px-6 py-3 text-sm font-bold text-navy-900"
           >
