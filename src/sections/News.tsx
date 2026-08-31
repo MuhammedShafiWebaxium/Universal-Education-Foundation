@@ -2,7 +2,6 @@ import { CalendarDays } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 import scholarship from "@/assets/scholarship.jpg";
 import healthCamp from "@/assets/charity-health.jpg";
-import learners from "@/assets/indian-learners.jpg";
 
 const news = [
   {
