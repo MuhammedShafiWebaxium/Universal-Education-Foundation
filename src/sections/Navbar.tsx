@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import logo from '@/assets/uef-logo.png'
 
@@ -11,11 +11,23 @@ const links = [
 ]
 
 export function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const solid = scrolled || open
 
   return (
     <header
-      className="sticky top-0 z-50 bg-white/95 shadow-lg shadow-navy-900/5 backdrop-blur"
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        solid ? 'bg-white/95 shadow-lg shadow-navy-900/5 backdrop-blur' : 'bg-transparent'
+      }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
         <a href="#top" className="flex items-center gap-3">
