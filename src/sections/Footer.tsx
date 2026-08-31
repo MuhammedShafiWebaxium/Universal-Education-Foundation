@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, MapPin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import logoWhite from "@/assets/uef-logo-white.png";
 
 const columns = [
